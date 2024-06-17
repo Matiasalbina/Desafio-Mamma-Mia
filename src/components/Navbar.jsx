@@ -27,7 +27,7 @@ function NavPizza() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container className="text-center mt-4 header-background">
+      <Container className="text-center header-background">
         <h1>¡Pizzeria Mamma Mia!</h1>
         <h4>Tenemos las mejores pizzas que podrás encontrar</h4>
       </Container>

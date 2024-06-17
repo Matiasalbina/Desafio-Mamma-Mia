@@ -42,36 +42,36 @@ function Cart() {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: '10px' }}>
       <h2>Detalles del pedido:</h2>
       {cart.length === 0 ? (
         <p>No items in cart.</p>
       ) : (
         <>
           {Object.values(cartSummary).map((pizza, index) => (
-            <div key={index} style={{ display: 'flex', border: '1px solid #ccc', padding: '10px', margin: '10px', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div key={index} style={{ display: 'flex', border: '1px solid #ccc', padding: '5px', margin: '5px', alignItems: 'center', justifyContent: 'space-between' }}>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <img src={pizza.img} alt={pizza.name} style={{ width: '150px', height: 'auto', marginRight: '20px' }} />
+                <img src={pizza.img} alt={pizza.name} style={{ width: '100px', height: 'auto', marginRight: '10px' }} />
                 <div>
-                  <h3 style={{ margin: 0 }}>{pizza.name}</h3>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <button onClick={() => handleRemoveUnit(pizza)} style={{ padding: '5px 10px', backgroundColor: '#dc3545', color: 'white', border: 'none', borderRadius: '4px' }}>
+                  <h3 style={{ margin: '0 0 5px 0', fontSize: '1em' }}>{pizza.name}</h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                    <button onClick={() => handleRemoveUnit(pizza)} style={{ padding: '5px', backgroundColor: '#dc3545', color: 'white', border: 'none', borderRadius: '4px' }}>
                       -
                     </button>
                     <span>{pizza.quantity}</span>
-                    <button onClick={() => handleAddUnit(pizza)} style={{ padding: '5px 10px', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '4px' }}>
+                    <button onClick={() => handleAddUnit(pizza)} style={{ padding: '5px', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '4px' }}>
                       +
                     </button>
                   </div>
                 </div>
               </div>
-              <div>
-                <p style={{ margin: 0 }}><strong>Precio:</strong> {new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(pizza.price)}</p>
+              <div style={{ textAlign: 'right' }}>
+                <p style={{ margin: '0 0 5px 0' }}><strong>Precio:</strong> {new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(pizza.price)}</p>
                 <p style={{ margin: 0 }}><strong>Total:</strong> {new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(pizza.totalPrice)}</p>
               </div>
             </div>
           ))}
-          <div style={{ textAlign: 'left', marginTop: '20px' }}>
+          <div style={{ textAlign: 'left', marginTop: '10px' }}>
             <h3>Total a pagar: {formattedTotalAmount}</h3>
             <button
               style={{ padding: '10px 20px', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '4px', marginTop: '10px' }}

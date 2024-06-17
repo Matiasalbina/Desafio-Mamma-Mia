@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -17,15 +16,13 @@
   padding-right: 0;
 }
 
-.w-100 {
-  width: 100% !important;
-}
+
 
 .header-background {
   background-image: url('./assets/images/pizza-background.webp');
   background-size: cover;
   background-position: center;
-  padding: 20px;
+  padding: 5px;
   margin-top: 0%;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
